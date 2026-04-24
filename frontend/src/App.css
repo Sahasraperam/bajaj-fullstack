@@ -1,0 +1,296 @@
+:root {
+  color: #18212f;
+  background: #f5f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+}
+
+button,
+textarea {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 32px;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(280px, 420px) minmax(0, 1fr);
+  gap: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.input-panel,
+.result-panel {
+  background: #ffffff;
+  border: 1px solid #dfe5ef;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(22, 34, 51, 0.08);
+}
+
+.input-panel {
+  align-self: start;
+  padding: 24px;
+  position: sticky;
+  top: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #0f766e;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 24px;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+h2 {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+}
+
+label {
+  color: #516071;
+  font-weight: 700;
+}
+
+textarea {
+  width: 100%;
+  min-height: 420px;
+  resize: vertical;
+  border: 1px solid #c9d3e2;
+  border-radius: 6px;
+  padding: 14px;
+  color: #18212f;
+  background: #fbfcfe;
+  line-height: 1.5;
+}
+
+textarea:focus {
+  border-color: #0f766e;
+  outline: 3px solid rgba(15, 118, 110, 0.16);
+}
+
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #657386;
+}
+
+button {
+  min-width: 112px;
+  min-height: 42px;
+  border: 0;
+  border-radius: 6px;
+  color: #ffffff;
+  background: #0f766e;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #8aa5a1;
+  cursor: wait;
+}
+
+.result-panel {
+  min-height: 680px;
+  padding: 24px;
+}
+
+.empty-state,
+.error-box {
+  display: grid;
+  min-height: 260px;
+  place-content: center;
+  text-align: center;
+}
+
+.empty-state p,
+.muted {
+  color: #657386;
+}
+
+.error-box {
+  color: #9f1239;
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-radius: 8px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.summary-grid > div,
+.meta-strip,
+.hierarchy-card,
+.list-section {
+  border: 1px solid #dfe5ef;
+  border-radius: 8px;
+  background: #fbfcfe;
+}
+
+.summary-grid > div {
+  padding: 16px;
+}
+
+.summary-grid span {
+  display: block;
+  margin-bottom: 8px;
+  color: #657386;
+  font-size: 0.86rem;
+}
+
+.summary-grid strong {
+  font-size: 1.7rem;
+}
+
+.meta-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 12px;
+  color: #516071;
+}
+
+.meta-strip span {
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #eef6f5;
+}
+
+.list-section {
+  margin-top: 16px;
+  padding: 18px;
+}
+
+.hierarchy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.hierarchy-card {
+  padding: 16px;
+}
+
+.card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.status {
+  flex: 0 0 auto;
+  padding: 4px 8px;
+  border-radius: 999px;
+  color: #0f766e;
+  background: #ccfbf1;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.status-cycle {
+  color: #b45309;
+  background: #fef3c7;
+}
+
+.tree-view,
+.tree-view ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.tree-view li {
+  margin: 8px 0;
+}
+
+.node-label {
+  display: inline-block;
+  min-width: 28px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: #1e293b;
+  background: #e8eef6;
+  font-weight: 800;
+  text-align: center;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+pre {
+  max-height: 360px;
+  margin: 0;
+  overflow: auto;
+  border-radius: 6px;
+  padding: 16px;
+  color: #f8fafc;
+  background: #111827;
+  line-height: 1.45;
+}
+
+@media (max-width: 860px) {
+  .app-shell {
+    padding: 16px;
+  }
+
+  .workspace,
+  .summary-grid,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .input-panel {
+    position: static;
+  }
+
+  textarea {
+    min-height: 320px;
+  }
+}
